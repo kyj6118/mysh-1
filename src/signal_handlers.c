@@ -2,7 +2,8 @@
 
 void catch_sigint(int signalNo)
 {
-  // TODO: File this!
+	signal(SIGINT,(void *)catch_sigint);
+    	 printf("SIGNAL");
 }
 
 void catch_sigtstp(int signalNo)
